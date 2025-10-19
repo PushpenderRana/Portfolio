@@ -1,0 +1,67 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Pushpender</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="home.html" class="logo">Pushpender<span>.dev</span></a>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'skills' %}">Skills</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <section class="main-content">
+            <h2 class="reveal-on-scroll">Get In Touch</h2>
+            <div class="contact-grid reveal-on-scroll">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to me through any of the following methods:</p>
+                    <br>
+                    <div class="contact-info-item">
+                        <p><strong>Email:</strong> pushpenderrana270@gmail.com</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <p><strong>Phone:</strong> +91 9992493853</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <p><strong>Location:</strong> Delhi, India</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/pushpender-rana-2ba70031a" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/PushpenderRana" target="_blank">GitHub</a>
+                        <a href="https://www.hackerrank.com/profile/pushpenderrana21" target="_blank">HackerRank</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form  action="{% url 'contact' %}" method='POST' >
+                        {% csrf_token  %}
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    {% include "footer.html"%}
+    <script src="/static/script.js"></script>
+</body>
+</html>

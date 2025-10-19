@@ -1,0 +1,45 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushpender - Backend Developer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="home.html" class="logo">Pushpender<span>.dev</span></a>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'skills' %}">Skills</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <header class="hero reveal-on-scroll">
+            <div class="hero-text">
+                <p class="greeting">Hi, my name is</p>
+                <h1>Pushpender Rana</h1>
+                <p>I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                <a href="projects.html" class="btn">View My Projects</a>
+            </div>
+            <div class="hero-img">
+                <img src="/static/profile.jpg" alt="Pushpender's Profile Picture">
+            </div>
+        </header>
+    </div>
+    
+    {% include "footer.html"%}
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
