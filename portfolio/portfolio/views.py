@@ -21,18 +21,14 @@ def contact_(request):
         name=request.POST.get("name")
         email=request.POST.get("email")
         message_=request.POST.get("message")
-        # contactdata=contact.objects.all()
-        # data={'contactdata':contactdata}
-        
-        
-    contact.objects.create(contact_name=name,
+        contact.objects.create(contact_name=name,
                             contact_email=email,
                             contact_message=message_
 
         )
     
 
-    send_mail(
+        send_mail(
         subject=name,
         message=f"""
         email-{email} 
