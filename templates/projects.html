@@ -1,0 +1,68 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Pushpender</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="home.html" class="logo">Pushpender<span>.dev</span></a>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'skills' %}">Skills</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <section class="main-content">
+            <h2 class="reveal-on-scroll">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal-on-scroll">
+                    <div class="project-info">
+                        <h3>Music Store Analysis</h3>
+                        <p>
+                            An SQL data analysis project using a PostgreSQL database. I designed and executed complex SQL queries, including joins and subqueries, to answer real-world business questions related to the music store's data.
+                        </p>
+                        <p><strong>Technologies:</strong> SQL, PostgreSQL</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PushpenderRana/Music-store-analysis" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-on-scroll">
+                    <div class="project-info">
+                        <h3>Portfolio</h3>
+                        <p>
+                            This is my personal portfolio website built using Django framework. It showcases my projects, skills, and contact information in a clean and responsive design.
+                            The HTML, CSS, and JavaScript are used for the front-end design and i have took it from ai tool(gemini). The backed is fully managed and 
+                            developed by me using Django framework.
+                        </p>
+                        <p><strong>Technologies:</strong>Django,VScode,sqllite</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PushpenderRana/Portfolio" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more project cards here and add the "reveal-on-scroll" class -->
+            </div>
+        </section>
+    </div>
+
+    {% include "footer.html"%}
+    <script src="/static/script.js"></script>
+</body>
+</html>
